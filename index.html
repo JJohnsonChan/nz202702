@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🇳🇿 紐西蘭南島 10 天 9 夜自駕行程</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="bg-slate-100 text-slate-800 font-sans min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-emerald-800 to-teal-700 text-white shadow-lg sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center gap-2">
+      <div>
+        <h1 class="text-2xl font-bold flex items-center gap-2">
+          <span>🇳🇿</span> 紐西蘭南島 10 天 9 夜自駕行程
+        </h1>
+        <p class="text-emerald-100 text-xs sm:text-sm mt-1">
+          2027/02/24 – 2027/03/07 ｜ 4人自駕 ｜ Toyota Highlander (4WD)
+        </p>
+      </div>
+      <div class="flex gap-2 text-xs">
+        <span class="bg-emerald-900/60 px-3 py-1.5 rounded-full border border-emerald-500/30">🚗 Snap Rentals</span>
+        <span class="bg-emerald-900/60 px-3 py-1.5 rounded-full border border-emerald-500/30">🛒 PAK'nSAVE / Four Square</span>
+      </div>
+    </div>
+
+    <!-- Day Navigation Tabs -->
+    <nav class="bg-emerald-950/40 backdrop-blur-md border-t border-emerald-600/30">
+      <div class="max-w-5xl mx-auto px-2 flex overflow-x-auto no-scrollbar py-2 gap-1 text-sm font-medium" id="dayTabs">
+        <!-- JS Insert Tabs -->
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-5xl mx-auto px-4 py-6 flex-1 w-full" id="mainContent">
+    <!-- Active Day Details inserted via JS -->
+  </main>
+
+  <!-- Quick Info Footer -->
+  <footer class="bg-slate-900 text-slate-400 text-xs py-6 border-t border-slate-800">
+    <div class="max-w-5xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+      <div>
+        <p class="font-semibold text-slate-300">緊急聯絡資訊：</p>
+        <p>紐西蘭報案/救護車：111 ｜ 駐紐西蘭代表處電話：+64-27-449-9300</p>
+      </div>
+      <p>© 2027 New Zealand South Island Roadtrip</p>
+    </div>
+  </footer>
+
+  <script>
+    const itineraryData = [
+      {
+        day: 0,
+        date: "2027/02/24 (三)",
+        title: "台灣出發 ✈️ 飛往紐西蘭",
+        summary: "長途飛行與轉機，準備迎向紐西蘭南島大自然",
+        highlights: ["桃園國際機場 (TPE)", "轉機過境", "休息整備"],
+        stay: "機上過夜",
+        schedule: [
+          { time: "晚上", activity: "前往桃園國際機場辦理登機與行李託運", note: "確認護照、NZETA 電子簽證、國際駕照與駕駛本國駕照" },
+          { time: "夜間", activity: "搭乘國際航班搭飛往紐西蘭（經轉機點）", note: "機上充分休息" }
+        ]
+      },
+      {
+        day: 1,
+        date: "2027/02/25 (四)",
+        title: "抵達基督城 🚗 取車與市區採買",
+        summary: "12:35 抵達 Christchurch (CHC)，領取 SUV，大型賣場採買物資與食材",
+        highlights: ["CHC 機場入境", "Snap Rentals 取車", "PAK'nSAVE 採買", "基督城植物園"],
+        stay: "Christchurch City Hotel / 公寓 (基督城)",
+        schedule: [
+          { time: "12:35", activity: "抵達基督城國際機場 (CHC)", note: "通過海關申報（食物與露營用品嚴格檢查）" },
+          { time: "14:00", activity: "接駁至 Snap Rentals 領取 Toyota Highlander", note: "檢查車況、胎壓、拍照錄影紀錄" },
+          { time: "15:30", activity: "PAK'nSAVE Riccarton 大賣場採買", note: "採買水、早餐食材、零食、保冷袋、車用充電等" },
+          { time: "17:30", activity: "入住飯店 & 基督城植物園/雅芳河散步", note: "適應右駕與左側通行規則" },
+          { time: "19:00", activity: "晚餐：市區餐廳 (Pedro's House of Lamb 或 Riverside Market)", note: "早點休息克服時差" }
+        ]
+      },
+      {
+        day: 2,
+        date: "2027/02/26 (五)",
+        title: "基督城 → 蒂卡波湖 🌌 夢幻藍色湖泊與星空",
+        summary: "跨越坎特伯雷平原，品嚐著名 Fairlie 鹹派，抵達 Lake Tekapo",
+        highlights: ["Fairlie Bakehouse 鹹派", "好羊牧場教堂", "Mt John 景觀咖啡廳", "暗空保護區觀星"],
+        stay: "Tekapo Lakeview Holiday Park / Lake Tekapo 湖景小木屋",
+        schedule: [
+          { time: "09:00", activity: "基督城出發（沿 State Highway 1 & 79 駕駛）", note: "車程約 3 小時" },
+          { time: "11:30", activity: "Fairlie Bakehouse 享用午餐", note: "必吃：Pork & Apple 或 Salmon Pie" },
+          { time: "13:30", activity: "抵達 Lake Tekapo，前往 Mt John Observatory 咖啡館", note: "360度俯瞰蒂卡波湖絕美藍色湖水" },
+          { time: "15:30", activity: "好羊牧場教堂 (Church of the Good Shepherd) 參觀", note: "湖邊石造教堂拍照" },
+          { time: "17:00", activity: "住宿 Check-in & Four Square 補貨", note: "準備自煮晚餐" },
+          { time: "21:30", activity: "夜間觀星（蒂卡波湖暗空保護區）", note: "視天氣可參加銀河觀星團或教堂旁觀星" }
+        ]
+      },
+      {
+        day: 3,
+        date: "2027/02/27 (六)",
+        title: "蒂卡波湖 → 庫克山國家公園 🏔️ 庫克山健行",
+        summary: "沿 Lake Pukaki 湛藍湖岸前進，品嚐高山鮭魚，挑戰 Hooker Valley Track",
+        highlights: ["Lake Pukaki 鮭魚農場", "Hooker Valley 健行", "Tasman Glacier 冰河", "庫克山隱士飯店"],
+        stay: "Aoraki Mount Cook Alpine Lodge / Glentanner Park Centre",
+        schedule: [
+          { time: "08:30", activity: "出發前往 Lake Pukaki", note: "沿途欣賞 Mount Cook 倒影" },
+          { time: "09:30", activity: "Mount Cook Alpine Salmon 享用新鮮鮭魚刺身", note: "湖畔品嚐高空雪水養殖鮭魚" },
+          { time: "10:30", activity: "抵達庫克山國家公園，開跑 Hooker Valley Track", note: "來回約 3-4 小時，經過 3 座吊橋與冰河湖" },
+          { time: "15:00", activity: "Tasman Glacier Viewpoint 短健行", note: "單程約 20 分鐘步道觀賞塔斯曼冰河" },
+          { time: "17:00", activity: "Check-in 住宿與 Mount Cook 景觀休息", note: "山區天氣多變，備妥防風保暖衣物" }
+        ]
+      },
+      {
+        day: 4,
+        date: "2027/02/28 (日)",
+        title: "庫克山 → 瓦納卡 🍇 水果小鎮與孤獨樹",
+        summary: "經過 Omarama 與 Lindis Pass 壯麗高山公路，抵達步調悠閒的 Wanaka",
+        highlights: ["Lindis Pass 隘口", "Cromwell 水果鎮", "That Wanaka Tree 孤獨樹", "Wanaka 湖畔散步"],
+        stay: "Wanaka Edge Water Hotel / Wanaka Top 10 Holiday Park",
+        schedule: [
+          { time: "09:00", activity: "告別庫克山，經 SH8 號公路南下", note: "經過 High Country 景觀公路" },
+          { time: "11:00", activity: "Lindis Pass 觀景台拍照", note: "荒涼壯麗的高山金色草甸地形" },
+          { time: "12:30", activity: "Cromwell 水果小鎮 (Jones Family Orchard)", note: "購買當地水果、鮮果冰淇淋" },
+          { time: "14:30", activity: "抵達 Wanaka 湖，欣賞 That Wanaka Tree 孤獨樹", note: "湖中獨特巨木拍照熱點" },
+          { time: "16:30", activity: "Wanaka 鎮上漫步與咖啡廳", note: "享受悠閒湖畔氛圍" },
+          { time: "18:30", activity: "晚餐：Wanaka 湖畔特色餐廳 (如 Francesca's Italian Kitchen)", note: "建議提前訂位" }
+        ]
+      },
+      {
+        day: 5,
+        date: "2027/03/01 (一)",
+        title: "瓦納卡 → 皇后鎮 🪂 皇冠山脈與極限之都",
+        summary: "挑戰 Crown Range Road 景觀公路，造訪箭鎮金礦小鎮，抵達冒險之都皇后鎮",
+        highlights: ["Roy's Peak 或 Mt Iron 健行", "Cardrona Historic Hotel", "Arrowtown 箭鎮", "Skyline 纜車與 Luge"],
+        stay: "Novotel Queenstown Lakeside / 皇后鎮湖景公寓",
+        schedule: [
+          { time: "08:00", activity: "晨間健行：Mt Iron Track (約 1.5 小時)", note: "若體力極佳可選 Roy's Peak (約 5-6 小時)" },
+          { time: "11:00", activity: "行經 Crown Range Road (紐西蘭最高公路)", note: "途經歷史悠久的 Cardrona Hotel 拍照" },
+          { time: "12:30", activity: "Arrowtown 箭鎮古堡與金礦小鎮漫步", note: "品嚐烘焙坊午餐與參觀華人礦工遺址" },
+          { time: "15:00", activity: "抵達皇后鎮 Check-in", note: "皇后鎮中心停車位較緊，建議先停飯店" },
+          { time: "16:30", activity: "Skyline Gondola 纜車 & Luge 斜坡滑草車", note: "體驗刺激的 Luge 3-5 次體驗" },
+          { time: "19:00", activity: "晚餐：Fergburger 皇后鎮必吃大漢堡", note: "排隊名店，可先預訂或外帶至湖邊享用" }
+        ]
+      },
+      {
+        day: 6,
+        date: "2027/03/02 (二)",
+        title: "皇后鎮 → 米爾福德峽灣 → 蒂阿瑙 🚢 峽灣壯麗奇景",
+        summary: "一日往返 Milford Sound 峽灣巡航，夜宿螢火蟲小鎮 Te Anau",
+        highlights: ["Milford Road 景觀公路", "鏡湖 Mirror Lakes", "Milford Sound 峽灣巡航船", "Te Anau 螢火蟲洞"],
+        stay: "Distinction Te Anau Hotel & Villa / Te Anau Lakeview Kiwi Holiday Park",
+        schedule: [
+          { time: "06:30", activity: "提早出發前往 Milford Sound (經 Te Anau)", note: "車程較長，備足油量與零食" },
+          { time: "09:30", activity: "Milford Road 景觀停留：Mirror Lakes, Homer Tunnel", note: "高山隧道與冰河峽谷地形" },
+          { time: "12:00", activity: "Milford Sound 峽灣觀光船巡航 (約 2 小時)", note: "近距離觀賞瀑布、海豹與陡峭峽灣" },
+          { time: "15:00", activity: "返程開往 Te Anau 蒂阿瑙湖畔", note: "放慢車速注意野生鳥類 Kea" },
+          { time: "18:00", activity: "Te Anau Glowworm Caves 螢火蟲洞體驗", note: "搭船進入地下溶洞觀賞藍光螢火蟲" },
+          { time: "20:00", activity: "晚餐：Te Anau 鎮上中西式餐廳或肉餅店 (Miles Pies)", note: "休息恢復體力" }
+        ]
+      },
+      {
+        day: 7,
+        date: "2027/03/03 (三)",
+        title: "蒂阿瑙 → 皇后鎮 🍷 湖光山色與葡萄酒鄉",
+        summary: "返回皇后鎮，體驗 TSS 蒸氣船與高山農莊，享受精緻葡萄酒與休閒時光",
+        highlights: ["Kingston 湖岸公路", "TSS Earnslaw 蒸氣船", "Walter Peak 高山農莊", "Gibbston 葡萄酒莊"],
+        stay: "Novotel Queenstown Lakeside / 皇后鎮湖景公寓",
+        schedule: [
+          { time: "09:30", activity: "輕鬆起床，從 Te Anau 返回皇后鎮", note: "車程約 2 小時" },
+          { time: "12:00", activity: "Gibbston Valley 葡萄酒莊巡禮與午餐", note: "品嚐知名黑皮諾 (Pinot Noir) 葡萄酒" },
+          { time: "14:30", activity: "皇后鎮瓦卡蒂普湖 (Lake Wakatipu) 鎮上逛街採買", note: "購買 Whittakers 巧克力、羊毛製品等伴手禮" },
+          { time: "17:00", activity: "TSS Earnslaw 百年百年蒸汽船行程", note: "搭乘蒸汽船前往 Walter Peak Farm" },
+          { time: "18:30", activity: "Walter Peak 高山農場 BBQ 晚餐與剪羊毛秀", note: "湖畔美景搭配精緻自助燒烤" }
+        ]
+      },
+      {
+        day: 8,
+        date: "2027/03/04 (四)",
+        title: "皇后鎮 🪂 冒險挑戰日或高空跳傘",
+        summary: "皇后鎮自由活動，挑戰高空跳傘、高空彈跳，或前往格萊諾基探索",
+        highlights: ["NZONE 高空跳傘 / Bungee Jumping", "Glenorchy 魔戒小鎮", "Paradise 天堂鎮", "皇后鎮湖畔 Sunset"],
+        stay: "Novotel Queenstown Lakeside / 皇后鎮湖景公寓",
+        schedule: [
+          { time: "08:30", activity: "極限運動體驗 (NZONE Skydive / AJ Hackett Bungee)", note: "視個人意願自費預訂" },
+          { time: "11:30", activity: "駕車前往 Glenorchy 格萊諾基（最美湖畔公路）", note: "魔戒拍攝場景，車程約 45 分鐘" },
+          { time: "13:00", activity: "Glenorchy 紅色小屋與碼頭棧道拍照", note: "深入 Paradise (天堂鎮) 碎石路段" },
+          { time: "16:00", activity: "返回皇后鎮，Lake Wakatipu 湖畔飲品與野餐", note: "享受紐西蘭陽光與海鷗" },
+          { time: "19:00", activity: "晚餐：Flame Bar & Grill 烤肋排餐廳", note: "人氣極高，建議提早預約" }
+        ]
+      },
+      {
+        day: 9,
+        date: "2027/03/05 (五)",
+        title: "皇后鎮 → 基督城 (或國內線飛離) ✈️ 縱貫南島回程",
+        summary: "經 Inland Scenic Route 返回基督城，準備最後採買與整理打包",
+        highlights: ["Geraldine 小鎮休息", "Ashburton", "基督城紀念品採买", "打包行李"],
+        stay: "Sudima Christchurch Airport / 基督城機場附近飯店",
+        schedule: [
+          { time: "08:30", activity: "長途駕車返回基督城（經 Geraldine）", note: "約 5.5 - 6 小時車程（亦可選擇皇后鎮飛國內線至基督城）" },
+          { time: "13:00", activity: "Geraldine 小鎮午餐與 Barkers 果醬店採買", note: "選購紐西蘭在地手工果醬與醬料" },
+          { time: "16:30", activity: "抵達基督城，進行最後採買與車輛加油", note: "將車輛油箱加滿 (Full-to-Full)" },
+          { time: "18:30", activity: "入住機場附近飯店與整理行李", note: "確認所有物品與護照登機證" }
+        ]
+      },
+      {
+        day: 10,
+        date: "2027/03/06 (六) - 03/07 (日)",
+        title: "基督城 ✈️ 滿載回憶歸途",
+        summary: "Snap Rentals 歸還車輛，搭機返回台灣，結束精彩的南島自駕之旅",
+        highlights: ["Snap Rentals 還車", "CHC 機場免稅店", "搭機返台", "平安抵達"],
+        stay: "溫暖的家",
+        schedule: [
+          { time: "08:00", activity: "前往 Snap Rentals 機場門市辦理還車", note: "檢查車輛外觀與內部清潔，搭乘接駁車至航廈" },
+          { time: "10:30", activity: "基督城機場 (CHC) 辦理登機手續", note: "退稅（若有）與免稅店最後採購" },
+          { time: "13:00", activity: "搭乘國際航班返回台灣（經轉機點）", note: "於 3/7 清晨或午後平安抵達桃園機場" }
+        ]
+      }
+    ];
+
+    let activeDay = 1;
+
+    function renderTabs() {
+      const tabsContainer = document.getElementById('dayTabs');
+      tabsContainer.innerHTML = itineraryData.map(item => {
+        const isActive = item.day === activeDay;
+        return `
+          <button 
+            onclick="switchDay(${item.day})"
+            class="px-3 py-1.5 rounded-lg whitespace-nowrap transition flex items-center gap-1 text-xs sm:text-sm ${
+              isActive 
+                ? 'bg-emerald-500 text-white font-bold shadow' 
+                : 'text-emerald-100 hover:bg-emerald-800/50'
+            }">
+            <span>Day ${item.day}</span>
+          </button>
+        `;
+      }).join('');
+    }
+
+    function renderContent() {
+      const data = itineraryData.find(item => item.day === activeDay);
+      const contentContainer = document.getElementById('mainContent');
+
+      contentContainer.innerHTML = `
+        <div class="space-y-6 animate-fade-in">
+          <!-- Day Header Card -->
+          <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/80">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+              <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full">
+                DAY ${data.day} ｜ ${data.date}
+              </span>
+              <span class="text-xs text-slate-500 flex items-center gap-1">
+                <i class="fa-solid fa-bed text-emerald-600"></i> 住宿：${data.stay}
+              </span>
+            </div>
+            <h2 class="text-2xl font-bold text-slate-900 mt-1">${data.title}</h2>
+            <p class="text-slate-600 text-sm mt-2">${data.summary}</p>
+            
+            <!-- Highlights -->
+            <div class="mt-4 flex flex-wrap gap-2">
+              ${data.highlights.map(h => `
+                <span class="bg-slate-100 text-slate-700 text-xs px-2.5 py-1 rounded-md font-medium border border-slate-200">
+                  📍 ${h}
+                </span>
+              `).join('')}
+            </div>
+          </div>
+
+          <!-- Schedule Timeline -->
+          <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/80">
+            <h3 class="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2">
+              <i class="fa-regular fa-clock text-emerald-600"></i> 行程時間路線規劃
+            </h3>
+            <div class="relative border-l-2 border-emerald-200 ml-3 space-y-6 pl-6 my-2">
+              ${data.schedule.map(s => `
+                <div class="relative group">
+                  <div class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-emerald-500 border-4 border-white shadow"></div>
+                  <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+                    <span class="text-xs font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded w-fit">${s.time}</span>
+                    <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(s.activity)}" target="_blank" class="text-xs text-blue-600 hover:underline flex items-center gap-1">
+                      <i class="fa-solid fa-map-location-dot"></i> 地圖搜尋
+                    </a>
+                  </div>
+                  <h4 class="text-base font-semibold text-slate-800 mt-1">${s.activity}</h4>
+                  ${s.note ? `<p class="text-xs text-slate-500 mt-0.5 bg-slate-50 p-2 rounded border border-slate-100">💡 ${s.note}</p>` : ''}
+                </div>
+              `).join('')}
+            </div>
+          </div>
+
+          <!-- Tips / Important Notes -->
+          <div class="bg-amber-50 border border-amber-200 rounded-2xl p-5 text-xs text-amber-900 space-y-2">
+            <div class="font-bold text-amber-800 text-sm flex items-center gap-1.5">
+              <i class="fa-solid fa-triangle-exclamation"></i> 駕駛與注意事項提醒
+            </div>
+            <ul class="list-disc list-inside space-y-1 text-amber-800/90">
+              <li>紐西蘭為左側通行（右駕），請特別注意圓環（Roundabout）讓右側來車優先原則。</li>
+              <li>南島山區道路多單向橋樑（Give Way 標誌），請依優先權箭頭標示讓行。</li>
+              <li>請隨時保持油箱半滿以上狀態，山區加油站間距較遠。</li>
+            </ul>
+          </div>
+        </div>
+      `;
+    }
+
+    function switchDay(day) {
+      activeDay = day;
+      renderTabs();
+      renderContent();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Initialize Page
+    renderTabs();
+    renderContent();
+  </script>
+</body>
+</html>
