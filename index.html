@@ -53,6 +53,14 @@
     <!-- Summary / Extra Info Tab (First Tab) -->
     <div id="content-summary" class="tab-content hidden space-y-6">
       
+      <!-- 行程地圖插圖 (讀取 GitHub 同目錄下的 nz-itinerary.jpg) -->
+      <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200 flex flex-col items-center">
+        <h3 class="text-lg font-bold text-emerald-800 mb-3 border-b w-full pb-2"><i class="fa-solid fa-map-marked-alt text-emerald-600 mr-2"></i>紐西蘭之旅行程地圖</h3>
+        <div class="overflow-hidden rounded-lg border border-slate-100 max-w-full">
+          <img src="./nz-itinerary.jpg" alt="紐西蘭南島行程地圖" class="w-full h-auto max-h-[700px] object-contain hover:scale-102 transition duration-300" onerror="this.onerror=null; this.src='https://via.placeholder.com/800x1000?text=Please+Upload+nz-itinerary.jpg+to+GitHub';">
+        </div>
+      </div>
+
       <!-- 住宿整理 -->
       <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200">
         <h3 class="text-lg font-bold text-emerald-800 mb-3 border-b pb-2"><i class="fa-solid fa-hotel text-emerald-600 mr-2"></i>住宿總覽（點擊可開啟地圖）</h3>
@@ -393,7 +401,7 @@
             <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full">Day 10 ｜ 2027/03/06 (六)</span>
             <h2 class="text-xl font-bold mt-2">Christchurch → 台灣 ｜ 返程</h2>
           </div>
-          <span class="text-xs bg-slate-100 text-slate-600 px-2.5 py-1 rounded-lg">返程日</span>
+          <span class="text-xs bg-slate-100 text-slate-600 px-3 py-1 rounded-lg">返程日</span>
         </div>
         <div class="space-y-3 text-slate-700">
           <div class="flex gap-3 items-start"><span class="font-mono text-emerald-600 w-14 shrink-0">10:00</span><span>退房，前往 Christchurch Airport。</span></div>
